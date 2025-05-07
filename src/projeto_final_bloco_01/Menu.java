@@ -3,6 +3,9 @@ package projeto_final_bloco_01;
 import java.io.IOException;
 import java.util.Scanner;
 
+import projeto_final_bloco_01.model.Camisetas;
+import projeto_final_bloco_01.model.Discos;
+import projeto_final_bloco_01.model.Produto;
 import projeto_final_bloco_01.util.Cores;
 
 public class Menu {
@@ -10,7 +13,14 @@ public class Menu {
 	public static void main(String[] args) {
 
 		Scanner leia = new Scanner(System.in);
-		int opcao = -1;
+		
+		int opcao;
+		
+		Discos d1 = new Discos(1, "Ceremonials", 1, 80.0f, "Vinil - LP");
+		d1.visualizar();
+		
+		Camisetas c1 = new Camisetas(2, "Shake It Out", 2, 150.0f, "M", "Preta");
+		c1.visualizar();
 
 		while (true) {
 			System.out.print(Cores.ANSI_WHITE_BACKGROUND + Cores.TEXT_BLUE_BRIGHT);
@@ -43,6 +53,7 @@ public class Menu {
 			switch (opcao) {
 			case 1:
 				System.out.println("\n Cadastrar um produto");
+				
 				
 				keyPress();
 				break;
